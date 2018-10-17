@@ -8,4 +8,4 @@ sprites are complicated but cool when you get them working correctly. Each frame
 Things I want to learn to enhance the experience:
 I want to learn how to take a large sprite sheet and take items directly from it and import them for texture, objects, etc
 
-added stuff for a push
+added stuff for a push again
