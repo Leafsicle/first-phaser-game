@@ -31,7 +31,7 @@ let bombs
 let game = new Phaser.Game(config)
 
 function preload() {
-	this.load.image('sky', 'assets/sky.png')
+	this.load.image('sky', 'assets/bck.png')
 	this.load.image('ground', 'assets/platform.png')
 	this.load.image('ground2', 'assets/platform2.png')
 	this.load.image('light', 'assets/light.png')
@@ -82,9 +82,9 @@ function create() {
 		.create(400, 120, 'ground2')
 		.setScale(0.25)
 		.refreshBody()
+	// player.setscale(0.6)
 
-	player = this.physics.add.sprite(200, 450, 'dude')
-
+	player = this.physics.add.sprite(400, 450, 'dude')
 	player.setBounce(0.2)
 	player.setCollideWorldBounds(true)
 
@@ -119,7 +119,7 @@ function create() {
 	})
 
 	stars.children.iterate(star => {
-		star.setBounceY(Phaser.Math.FloatBetween(0.99, 1.0))
+		star.setBounceY(Phaser.Math.FloatBetween(0.1, 0.79))
 	})
 
 	this.physics.add.collider(stars, platforms)
