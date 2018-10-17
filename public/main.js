@@ -39,8 +39,8 @@ function preload() {
 	this.load.image('star', 'assets/star.png')
 	this.load.image('bomb', 'assets/bomb.png')
 	this.load.spritesheet('dude', 'assets/dude.png', {
-		frameWidth: 75,
-		frameHeight: 100,
+		frameWidth: 32,
+		frameHeight: 48,
 		setScale: 1
 	})
 }
@@ -182,6 +182,10 @@ function update() {
 		player.setVelocityX(160)
 
 		player.anims.play('right', true)
+	} else if (cursors.down.isDown) {
+		player.setVelocityY(4000)
+
+		player.anims.play('turn', true)
 	} else {
 		player.setVelocityX(0)
 
@@ -189,6 +193,6 @@ function update() {
 	}
 
 	if (cursors.up.isDown && player.body.touching.down) {
-		player.setVelocityY(-330)
+		player.setVelocityY(-530)
 	}
 }
